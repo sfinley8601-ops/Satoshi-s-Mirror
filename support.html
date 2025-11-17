@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Satoshi's Mirror with Bitcoin Lightning tips.">
+    <title>Support | Satoshi's Mirror</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">SATOSHI'S MIRROR</a>
+            </div>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="episodes.html">Episodes</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Support the Project</h1>
+            <p class="subtitle">Help keep this independent documentary series alive.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="support-grid">
+                
+                <!-- Lightning Wallet Section -->
+                <div class="support-main">
+                    <div class="lightning-section">
+                        <div class="bitcoin-icon">₿</div>
+                        <h2>Bitcoin Lightning Tips</h2>
+                        <p>Satoshi's Mirror is an independent project created with passion and dedication. If you appreciate the work and want to support future episodes, you can send Bitcoin tips via Lightning Network.</p>
+                        
+                        <div class="wallet-box">
+                            <p class="wallet-label">Lightning Address:</p>
+                            <div class="wallet-address">
+                                <code id="lightning-address">satoshis-mirror@rizful.com</code>
+                                <button class="copy-btn" onclick="copyAddress()">Copy</button>
+                            </div>
+                            <p class="wallet-note">Click to copy the Lightning address</p>
+                        </div>
+
+                        <div class="why-lightning">
+                            <h3>Why Lightning?</h3>
+                            <p>Lightning Network enables instant, low-fee Bitcoin transactions—perfect for supporting creators directly without intermediaries. It's peer-to-peer value transfer, just like Satoshi envisioned.</p>
+                            
+                            <div class="lightning-benefits">
+                                <div class="benefit">
+                                    <span class="benefit-icon">⚡</span>
+                                    <div>
+                                        <h4>Instant</h4>
+                                        <p>Transactions settle in seconds</p>
+                                    </div>
+                                </div>
+                                <div class="benefit">
+                                    <span class="benefit-icon">💰</span>
+                                    <div>
+                                        <h4>Low Fees</h4>
+                                        <p>Minimal costs, maximum support</p>
+                                    </div>
+                                </div>
+                                <div class="benefit">
+                                    <span class="benefit-icon">🔗</span>
+                                    <div>
+                                        <h4>Direct</h4>
+                                        <p>No middlemen, pure peer-to-peer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="other-support">
+                        <h3>Other Ways to Support</h3>
+                        <div class="support-methods">
+                            <div class="support-method">
+                                <h4>Share the Series</h4>
+                                <p>The best support is spreading the word. Share episodes on social media, discuss with friends, and help grow the community.</p>
+                            </div>
+                            <div class="support-method">
+                                <h4>Subscribe & Engage</h4>
+                                <p>Subscribe on YouTube, follow on social media, like videos, and leave comments. Engagement helps the algorithm show our work to more people.</p>
+                            </div>
+                            <div class="support-method">
+                                <h4>Provide Feedback</h4>
+                                <p>Your thoughts and suggestions help improve the series. Let us know what resonates and what could be better.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="support-sidebar">
+                    <div class="sidebar-box">
+                        <h4>Where Your Support Goes</h4>
+                        <ul class="support-list">
+                            <li>Animation production</li>
+                            <li>Research and script development</li>
+                            <li>Sound design and music</li>
+                            <li>Software and tools</li>
+                            <li>Future episodes</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-box">
+                        <h4>This is a Labor of Love</h4>
+                        <p>Every episode takes weeks of research, writing, image generation, animation, and editing. Your support helps make this sustainable.</p>
+                    </div>
+
+                    <div class="sidebar-box highlight-box">
+                        <h4>Thank You</h4>
+                        <p>Whether you tip, subscribe, or simply watch—thank you for being part of this journey. You're helping document Bitcoin's story for future generations.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Created by <a href="https://twitter.com/LineTrash" target="_blank">LineTrash</a></p>
+            <p class="copyright">&copy; 2025 Satoshi's Mirror. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyAddress() {
+            const address = document.getElementById('lightning-address').textContent;
+            navigator.clipboard.writeText(address).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = 'var(--accent-gold)';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
